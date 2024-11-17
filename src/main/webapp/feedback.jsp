@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>Feedback Page</title>
   <%@include file="comp/links.jsp"%>
 </head>
 <body>
@@ -11,21 +11,25 @@
   <div class="content_container container d-flex flex-column justify-content-center align-items-center">
     <h3 class="text-white">Fill the feedback form:</h3>
 
-    <form>
+    <form action="feedback" method="post" class="mt-3 text-white">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter here">
+        <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter here">
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      <div class="mb-3">
+        <label for="feedbackMessage" class="form-label">Your Feedback Message</label>
+        <textarea rows="7" placeholder="Enter Here" class="form-control"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="container text-center">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-light">Reset</button>
+      </div>
+
     </form>
   </div>
 
