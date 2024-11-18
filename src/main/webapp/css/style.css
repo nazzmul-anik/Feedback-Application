@@ -4,3 +4,6 @@ body{
 .content_container{
     height: 100vh;
 }
+.content_container a{
+    width: 100%;
+}

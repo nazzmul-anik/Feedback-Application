@@ -3,4 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <context-param>
+        <param-name>app_name</param-name>
+        <param-value>FeedbackApp</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>thridServlet</servlet-name>
+        <servlet-class>org.anik.feedback.session.ThirdServlet</servlet-class>
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>Anik</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>thridServlet</servlet-name>
+        <url-pattern>/servlet-three</url-pattern>
+    </servlet-mapping>
+
 </web-app>
